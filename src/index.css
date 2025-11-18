@@ -1,0 +1,97 @@
+:root {
+  background-color: #f0f0f0;
+}
+
+/* Navbar */
+.navbar-brand img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.navbar-toggler {
+  border: 2px solid #a7ebf2 !important;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon {
+  color: #a7ebf2 !important;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  background-color: rgba(225, 255, 255, 0.15);
+  border-color: #fff;
+}
+
+.navbar-nav .nav-link h5 {
+  position: relative;
+  display: inline-block;
+  color: white;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link h5::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #a65146;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover h5::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link.active h5::after {
+  width: 100%;
+}
+
+
+.navbar-collapse.show {
+  z-index: 20;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse.show {
+    border-top: 2px solid #a65146;
+    padding-top: 1rem;
+  }
+  .navbar-collapse.show .navbar-nav .nav-item {
+    margin-bottom: 1.5rem;
+  }
+  .navbar-collapse.show .navbar-nav .nav-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Footer */
+footer a {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+footer a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  width: 0;
+  height: 2px;
+  background-color: #a65146;
+  transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+  width: 100%;
+}
+
+footer a:hover i {
+  color: #a7ebf2;
+  transition: color 0.3s ease;
+}
