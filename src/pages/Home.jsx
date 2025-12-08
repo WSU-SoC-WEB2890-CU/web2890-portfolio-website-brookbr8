@@ -35,7 +35,21 @@ function HomePage() {
         </div>
       </section>
 
-      <section id="seeMore" className="projects-section py-5 position-relative text-center">
+      <section className="skills" id="seeMore">
+        <div className="container">
+          <h2>My Skills</h2>
+          <div className="skills-list">
+            <div className="skill-item">HTML</div>
+            <div className="skill-item">CSS</div>
+            <div className="skill-item">SCSS</div>
+            <div className="skill-item">JavaScript</div>
+            <div className="skill-item">BootStrap</div>
+            <div className="skill-item">React</div>
+          </div>
+        </div>
+      </section>
+
+      <section className="projects-section py-5 position-relative text-center">
         <div className="container">
           <h2 className="mb-5 text-dark">Recent Projects</h2>
           <div className="row justify-content-center g-4">
