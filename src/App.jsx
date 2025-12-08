@@ -1,15 +1,17 @@
-import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import Gallery from "./pages/Gallery";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import "./App.css"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import Home from "./pages/Home"
+import Gallery from "./pages/Gallery"
+import About from "./pages/About"
+import Contact from "./pages/Contact"
+import ScrollToTop from "./components/ScrollToTop"
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -19,7 +21,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

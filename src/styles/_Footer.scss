@@ -1,0 +1,57 @@
+footer {
+  font-family: $font-family-base;
+  background: $primary;
+  color: $white;
+  padding: 2rem 0;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // Social links
+  a {
+    color: $white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    font-size: 1.8rem;
+
+    &:hover {
+      color: $lt-blue;
+      transform: scale(1.2);
+      background: rgba($lt-blue, 0.15);
+    }
+  }
+
+  // Social icon container spacing
+  .d-flex {
+    gap: 1.5rem; // desktop spacing
+    margin-bottom: 1rem;
+  }
+
+  // Small text
+  .small {
+    font-size: 0.85rem;
+    font-family: $font-family-base;
+    color: rgba($white, 0.75);
+  }
+
+  // Optional: add a top border accent like in header
+  &::before {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 3px;
+    background: $accent;
+    margin: 0 auto 1rem auto;
+    border-radius: 2px;
+  }
+}
