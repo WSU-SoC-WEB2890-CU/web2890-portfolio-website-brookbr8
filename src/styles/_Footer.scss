@@ -26,7 +26,8 @@ footer {
     &:hover {
       color: $lt-blue;
       transform: scale(1.2);
-      background: rgba($lt-blue, 0.15);
+      background: $brick-red;
+      border-radius: 1rem;
     }
   }
 
@@ -46,7 +47,7 @@ footer {
     content: "";
     display: block;
     width: 80%;
-    height: 3px;
+    height: 2px;
     background: $accent;
     margin: 0 auto 1rem auto;
     border-radius: 2px;
