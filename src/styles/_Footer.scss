@@ -1,0 +1,55 @@
+footer {
+  font-family: $font-family-base;
+  background: $primary;
+  color: $white;
+  padding: 2rem 0;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  a {
+    color: $white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    font-size: 1.8rem;
+
+    &:hover {
+      color: $lt-blue;
+      transform: scale(1.2);
+      background: $brick-red;
+      border-radius: 1rem;
+    }
+  }
+
+  .d-flex {
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+
+  .small {
+    font-size: 0.85rem;
+    font-family: $font-family-base;
+    color: rgba($white, 0.75);
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 2px;
+    background: $accent;
+    margin: 0 auto 1rem auto;
+    border-radius: 2px;
+  }
+}

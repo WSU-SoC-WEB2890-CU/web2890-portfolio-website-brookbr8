@@ -1,0 +1,121 @@
+/* Contact Page */
+.contact-page {
+  color: #023859;
+
+  /* HERO SECTION */
+  .contact-hero {
+    background: linear-gradient(135deg, #023859, #035b85);
+    color: #fff;
+    padding: 5rem 1.5rem;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 700;
+      font-family: "Pacifico", cursive;
+      color: #a7ebf2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      opacity: 0.9;
+    }
+  }
+
+  /* FORM SECTION */
+  .contact-form-section {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 1rem;
+  }
+
+  .contact-form-container {
+    width: min(600px, 90%);
+    background: #ffffff;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    animation: fadeIn 0.6s ease;
+  }
+
+  /* Form styling */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .form-label {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: #023859;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      border: 2px solid #cddbe3;
+      background: #f7fafc;
+      transition: all 0.25s ease;
+      font-size: 1rem;
+
+      &:focus {
+        outline: none;
+        border-color: #a65146;
+        background: #fff;
+        box-shadow: 0 0 0 4px rgba(166, 81, 70, 0.2);
+      }
+    }
+
+    textarea {
+      resize: none;
+      line-height: 1.5;
+    }
+
+    /* Accent button reused from your theme */
+    button.btn-accent {
+      background-color: #a65146;
+      border-color: #a65146;
+      padding: 0.9rem 2rem;
+      border-radius: 12px;
+      font-size: 1.15rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #8c382d;
+        border-color: #8c382d;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+      }
+    }
+  }
+
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-page {
+    .hero-title {
+      font-size: 2.2rem !important;
+    }
+
+    .contact-form-container {
+      padding: 2rem 1.5rem;
+    }
+  }
+}

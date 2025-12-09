@@ -1,0 +1,44 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+$font-family-base: "Merriweather", serif;
+$font-family: "Pacifico", cursive;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family;
+}
+
+// Bootstrap Override
+$primary: #023859;
+$secondary: #26658c;
+$dk-blue: #011c40;
+$lt-blue: #a7ebf2;
+$brick-red: #a65146;
+$accent: #8c382d;
+$white: #f0f0f0;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "lt-blue": $lt-blue,
+  "white": $white,
+  "dk-blue": $dk-blue,
+  "accent": $accent,
+);
+
+// Bootstrap Import
+@import "Header";
+@import "Hero";
+@import "Skills";
+@import "Cards";
+@import "AboutMe";
+@import "Contact";
+@import "Footer";
+
+@import "bootstrap/scss/bootstrap";

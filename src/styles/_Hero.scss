@@ -1,0 +1,169 @@
+.hero {
+  position: relative;
+  padding: 6rem 0;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, $primary, $dk-blue);
+  color: $white;
+  font-family: $font-family-base;
+
+  .hero-bg-shapes {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.4;
+    }
+
+    &::before {
+      background: $secondary;
+      width: 450px;
+      height: 450px;
+      top: -120px;
+      left: -150px;
+    }
+
+    &::after {
+      background: $accent;
+      width: 500px;
+      height: 500px;
+      bottom: -150px;
+      right: -180px;
+    }
+  }
+
+  .hero-text {
+    max-width: 650px;
+    z-index: 2;
+
+    .hero-title {
+      font-size: clamp(3rem, 6vw, 5rem);
+      color: $lt-blue;
+      font-family: $font-family;
+      margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.6rem;
+      opacity: 0.9;
+      color: $white;
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+    }
+
+    .hero-tagline {
+      font-size: 1.15rem;
+      opacity: 0.8;
+      max-width: 480px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 10rem;
+
+      .btn {
+        padding: 0.85rem 1.8rem;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: all 0.25s ease;
+
+        &.btn-accent {
+          background: $accent;
+          color: $white;
+          border: none;
+          box-shadow: 0 8px 25px rgba($accent, 0.4);
+
+          &:hover {
+            transform: translateY(-2px);
+            background: darken($accent, 6%);
+          }
+        }
+
+        &.btn-outline-light {
+          border: 2px solid rgba($white, 0.6);
+          backdrop-filter: blur(4px);
+          color: white;
+
+          &:hover {
+            background: rgba($white, 0.15);
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }
+
+  .hero-strip {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: min(40vw, 300px);
+    opacity: 0.45;
+    mix-blend-mode: lighten;
+    pointer-events: none;
+  }
+
+  .hero-image-wrapper {
+    position: absolute;
+    right: 7%;
+    bottom: 10%;
+    z-index: 3;
+
+    .hero-image-bg {
+      position: absolute;
+      inset: -22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, $lt-blue, $secondary);
+      filter: blur(55px);
+      opacity: 0.4;
+    }
+
+    .hero-image {
+      width: clamp(180px, 22vw, 260px);
+      border-radius: 50%;
+      border: 4px solid rgba($white, 0.35);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+@media (max-width: 770px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin: 0 auto;
+
+    .hero-buttons {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+
+  .hero-image,
+  .hero-image-bg,
+  .hero-strip {
+    display: none !important;
+  }
+}
+
+}
